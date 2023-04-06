@@ -1,0 +1,315 @@
+/* The following CSS Styles took heavy inspirations from discord */
+
+body {
+  /*user-select: none;*/
+  font-family: Arial;
+background-color: rgb(54, 57, 63);
+color: #bbbbbb;
+margin: 0;
+}
+
+a {
+  color: #4768ff;
+}
+
+a:visited {
+  color: #677bc4;
+}
+
+
+/* NAVIGATION */
+nav {
+  background-color: #2f3136;
+  height: 100%;
+  width: 120px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  padding: 1rem 0 0;
+  display: flex;
+  flex-direction: column;
+}
+nav h1 {
+  margin: 0.25rem 1rem 1rem 1rem;
+  font-family: impact;
+  font-size: 1.20rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+nav img {
+  margin: 0 auto 1rem auto;
+  width: 66px;
+  height: 66px;
+  display: flex;
+  border-radius: 50%;
+  transition: .4s;
+  border: 1px solid #bbbbbb;
+}
+nav img:hover {
+  border-radius: 25%;
+}
+nav a {
+  position: relative;
+}
+
+/* TOOL TIP IN NAVIGATION*/
+.tooltip-text {
+  position: absolute;
+  z-index: 1;
+  visibility: hidden;
+  border: none;
+  border-radius: 5px;
+  padding: 7px;
+  white-space: nowrap;
+  text-align: center;
+  background-color: #7688d4;
+  color: white;
+  --tooltip-arrow-color: #7688d4;
+  top: -5px;
+  left: 110%;
+}
+.tooltip-text:after {
+content: " ";
+position: absolute;
+top: 50%;
+right: 100%;
+/* To the left of the tooltip */
+margin-top: -5px;
+border-width: 5px;
+border-style: solid;
+border-color: transparent var(--tooltip-arrow-color) transparent transparent;
+}
+nav a:hover .tooltip-text {
+visibility: visible;
+animation-name: openTooltip;
+animation-duration: 250ms;
+animation-fill-mode: linear;
+}
+@keyframes openTooltip {
+from {
+  opacity: 0;
+}
+to {
+  opacity: 1;
+}
+}
+
+/* TOP HEADER */
+header {
+  background-color: rgb(49 51 56);
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;    
+  padding: 1rem 0 1rem 0;
+  margin: 0;
+}
+
+
+/* MAIN */
+main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8.5rem;
+}
+main .warning {
+  background-color: rgba(250, 166, 26, 0.1);
+  border: 1px solid #faa61a;
+  align-items: center;
+  border-radius: 5px;
+  width: fit-content;
+  padding: 0 1rem;
+  display: flex;
+  color: white;
+  margin: auto;
+}
+.homepage * {
+  font-size: 1.4rem;
+  width: 40%;
+  margin: 0.5rem auto 0.5rem auto;
+}
+.homepage li {
+  margin: 0 0 0 2.5rem;
+  width: 100%;
+}
+.homepage h2 {
+  font-size:1.69rem; 
+  margin-top: 2.5rem; 
+  color:white;
+}
+.homepage h4 {
+  padding-left:2rem; 
+  margin-bottom:0.5rem;
+}
+
+#game {
+  display: flex;   
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto;
+  border: 2px solid #bbbbbb;
+  border-radius: 10px;
+}
+#scoreboard {
+  width: 400px;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+}
+
+/* BUTTONS */
+button {
+  background-color: #4768ff;
+  justify-content: center;
+  border-radius: 5px;
+  padding: .5rem 1rem;
+  margin: 1rem .5rem;
+  border:  #4768ff;
+  display: flex;
+  color: white;
+}
+button:active {
+  background-color: #677bc4;   
+  border: #677bc4;
+  font-weight: bolder;
+}
+button.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+#reset {
+  background-color: #ff3a3b;
+}
+#reset:active {
+  background-color: #c03939;
+}
+
+/* SWITCHES */
+.switch-container {
+  width: 400px;
+  margin: 0.5rem auto;
+  display: flex;
+  justify-content: space-between;
+}
+.switch-container:hover  {
+  background-color: rgba(0, 0, 0, 0.1);
+  /* margin: ; */
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 25px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(39, 41, 46);
+  transition: .4s;
+  border-radius: 10px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 21px;
+  width: 21px;
+  left: 5px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #38e654;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+/* CODE SAMPLES */
+.code {
+  word-spacing: 0.25rem;
+  padding: 1rem 2rem 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  font-size: 16px;
+  overflow: auto;
+}
+.code .declaration {
+  color: rgb(48, 98, 197);
+}
+.code .className {
+  color: rgb(172 221 148);
+}
+.code .method {
+  color: rgb(223 220 126);
+}
+.code .param {
+  color: rgb(30 70 151);
+}
+.code .string {
+  color: rgb(65 104 60);
+}
+
+/* LIVE CLOCK*/
+.clock {
+  display: flex;
+  padding: 1rem 2rem 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  overflow: auto;
+}
+.clock span {
+  margin: auto;
+  font-size: 550%;
+  padding: 0;
+  text-align: center;
+  font-weight: 1000;
+}
+.clock .dot {
+  color: #bbbbbb;
+  width: max-content;
+animation: blink 1.5s cubic-bezier(0, 1.26, 0, 1.11) infinite;
+}
+@keyframes blink{
+  0%{opacity: 0;}
+  50%{opacity: 1;}
+  100%{opacity: 0;}
+}
+
+/* INPUT SAMPLES (SATIRE) */
+#input-samples {
+  padding: 1rem 2rem 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+}
+#input-samples div {
+  width: 100%;
+  text-align: center;
+}
+#input-samples select {
+  width: 15%;
+}

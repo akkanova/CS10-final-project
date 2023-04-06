@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "sourceMap": true,
+    "lib": [
+      "ES5",
+      "DOM"
+    ],
+    // "noUnusedLocals": true,
+    "module": "CommonJS",
+    "rootDir": "./src/",
+    "outDir": "./build/",
+  }
+}

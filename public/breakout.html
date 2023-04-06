@@ -1,0 +1,86 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <title>A Breakout Game</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <nav>
+      <h1>Breakout</h1>
+      <a href="./homepage.html">
+        <img src="./assets/homepage_thumbnail.png" alt="Homepage Thumbnail" />
+        <span class="tooltip-text">Homepage</span>
+      </a>
+      <a href="./teach_me_something.html">
+        <img src="./assets/teach_me_something_thumbnail.png" alt="Teach Me Something Thumbnail" />
+        <span class="tooltip-text">Teach Me Something</span>
+      </a>
+      <a href="./old_homepage.html">
+        <img src="./assets/old_homepage.png" alt="Old Homepage Thumbnail" />
+        <span class="tooltip-text">Old Homepage</span>
+      </a>
+    </nav>
+
+    <header>
+      <h1>Breakout: My Final Project</h1>
+    </header>
+
+    <main>
+      <div id="scoreboard">
+        <span>Score: <b id="score">0</b></span>
+        <span>Lives: <b id="lives">3</b></span>
+      </div>
+      <canvas id="game" width="400" height="480">
+        If you can read this, then that means your browser could not load this game.. Try enabling JS.
+      </canvas>
+      <div class="warning" style="margin-top: 0.5rem">  
+        <!-- I just personally like the little warning status thing -->
+        <p>Probable low performance due to terrible coding</p>
+      </div>
+      <div style="display: flex; flex-direction: row; justify-content: center">
+        <button id="start-game">START</button>
+        <button id="pause">PAUSE</button>
+        <button id="reset" class="disabled" disabled>RESET</button>
+      </div>
+      <h3 style="width: 500px; margin: 1rem auto">ADVANCED OPTIONS (RESET TO APPLY)</h3>
+      <div class="switch-container">
+        <span>🤖 Automated Gameplay (Cheat)</span>
+        <label class="switch">
+          <input type="checkbox" id="auto_mode" />
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="switch-container">
+        <span>❤️ Infinite Lives (Cheat)</span>
+        <label class="switch">
+          <input type="checkbox" id="infinite_lives" />
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="switch-container">
+        <span>💾 Keep Score</span>
+        <label class="switch">
+          <input type="checkbox" id="keep_score" />
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="switch-container">
+        <span>🥔 'Unplayable' Performance</span>
+        <label class="switch">
+          <input type="checkbox" id="potato_mode" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </main>
+
+    <noscript>You have JS disabled, please enable this.</noscript>
+    <!--Look in src/breakout.ts for non minified source coode-->
+    <script src="../build/breakout.js"></script>
+  </body>
+
+  </html>

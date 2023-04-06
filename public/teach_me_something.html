@@ -1,0 +1,103 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <title>Teach Me Something</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <nav>
+      <h1>Teach Me Something</h1>
+      <a href="./homepage.html">
+        <!-- Image data URI for reliable image load time-->
+        <img src="./assets/homepage_thumbnail.png" alt="Homepage Thumbnail">
+        <span class="tooltip-text">Homepage</span>
+      </a>
+      <a href="./Breakout.html">
+        <img src="./assets/breakout_thumbnail.png" alt="Breakout Thumbnail">
+        <span class="tooltip-text">Breakout Game</span>
+      </a>
+      <a href="./old_homepage.html">
+        <img src="./assets/old_homepage.png" alt="Old Homepage Thumbnail">
+        <span class="tooltip-text">Old Homepage</span>
+      </a>
+    </nav>
+
+    <header>
+      <h1>How to setup your own Discord Bot</h1>
+    </header>
+
+    <main class="homepage">
+      <div class="warning" style="width: 40%">
+        <p style="width: 100%">
+          These steps were designed based on my own experience and setup. There are various other ways to setup your
+          very own
+          bot, but this is the one I like the most.
+        </p>
+      </div>
+      <h2>STEP 1 : Set up a Discord Account</h2>
+      <p>
+        Obviously, you will need a Discord account and your very own server to use and test your bot. If you haven't
+        created
+        an account yet go to <a href="https://discord.com/">Discord.com</a> and create one. If you do have one, log into
+        it
+        and open up a server that you want to use. Also make sure you're an Admin within this server for easier bot to
+        server
+        integration.
+      </p>
+      <p>
+        You will also need an integrated development environment, I suggest downloading
+        <a href="https://code.visualstudio.com/Download">Visual Studio Code</a>
+        to edit your code with.
+      </p>
+      <h2>STEP 2 : Download Node.JS</h2>
+      <p>
+        Node.js is an open source javascript runtime environment that you will need to run your javascript code. You can
+        download it at
+        <a href="https://nodejs.org/en/">Nodejs.org</a> and install it on your operating system. You can test if you
+        successfully downloaded it by typing the following <u>separately</u> in your command line terminal :
+      </p>
+      <div class="code">
+        <code class="method">npm</code><code> -v</code><br />
+        <code class="method">node</code><code> -v</code>
+      </div>
+      <p>
+        These should return the version of your installed npm (Javascript Package Manager) and node (Javascript Runtime
+        Evironment).
+      </p>
+      <h2>STEP 3 : Get your Discord application token</h2>
+      <p>
+        The application token acts almost like an API key, a requirement needed for your code to communicate securely
+        and
+        properly with Discord's servers.
+      </p>
+      <p>
+        To get started go to
+        <a href="https://discordapp.com/developers/applications/me">discordapp.com/developers/applications/me</a>, hit
+        <i>New Application</i>. Give it an appropriate name, then click the button marked <i>Save Changes</i>. On the
+        right-hand menu, click <i>Bot</i>. Once in the menu click <i>Add Bot</i>.
+      </p>
+      <p>
+        In the box marked <i>App Bot User</i>, look for the phrase <i>Token: Click to Reveal</i>. Click it, and copy the
+        text
+        that appears. Also remember to <u>not share with anyone</u>; the token allows whoever posses it to take full
+        control
+        of your bot all under your account's name.
+      </p>
+      <h2>STEP 4 : Inviting your Discord Bot</h2>
+      <p>
+        Click on your bot’s page. Go to the <i>OAuth2</i> tab. Tick the <i>bot</i> checkbox under <i>scopes</i>. Tick
+        the
+        permissions required for your bot to function under <i>Bot Permissions</i>. Now the resulting URL can be used to
+        add
+        your bot to a server. Copy and paste the URL into your browser, choose a server to invite the bot to, and click
+        “Authorize”.
+      </p>
+    </main>
+  </body>
+
+  </html>

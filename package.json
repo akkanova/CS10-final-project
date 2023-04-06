@@ -1,0 +1,18 @@
+{
+  "name": "cs10-final-project",
+  "version": "1.0.0",
+  "description": "My final project for CS10",
+  "main": "build/server.js",
+  "scripts": {
+    "start": "tsc && node ."
+  },
+  "author": "Akkanova",
+  "repository": {
+    "url": "https://github.com/akkanova/CS10-final-project.git",
+    "type": "git"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "typescript": "^4.7.3"
+  }
+}

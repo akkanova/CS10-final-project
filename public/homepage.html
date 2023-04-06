@@ -1,0 +1,122 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <title>The Homepage</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <nav>
+      <h1>My Homepage</h1>
+      <a href="./breakout.html">
+        <img src="./assets/breakout_thumbnail.png" alt="Breakout Page Thumbnail" />
+        <span class="tooltip-text">Breakout Game</span>
+      </a>
+      <a href="./teach_me_something.html">
+        <img src="./assets/teach_me_something_thumbnail.png" alt="Teach Me Something Page Thumbnail" />
+        <span class="tooltip-text">Teach Me Something</span>
+      </a>
+      <a href="./old_homepage.html">
+        <img src="./assets/old_homepage.png" alt="Old Homepage Thumbnail" />
+        <span class="tooltip-text">Old Homepage</span>
+      </a>
+    </nav>
+
+    <header>
+      <h1>Computer Science 10: Final Project</h1>
+    </header>
+
+    <!-- Has a homepage class to differentiate CSS styles needed to be applied-->
+    <main class="homepage">
+      <p>
+        Hello! I'm on an adventure to learn all about software development so that one day I can
+        become a
+        <a href="https://bootcamp.learn.utoronto.ca/blog/what-is-a-full-stack-developer/">full-stack developer</a>.
+        That's
+        why I'm currently taking <strong>Computer Science 10</strong>.
+      </p>
+      <p>My favourite hobbies are :</p>
+      <ul>
+        <li>Programming in Javascript</li>
+        <li>Learning about how website request works</li>
+        <li>Developing my Web-scraping APIs</li>
+        <li>Developing Desktop Javascript application through electron</li>
+        <li>Solving puzzles inside computerized games</li>
+      </ul>
+      <h2>Web Design Course: My Current Experience</h2>
+      <p>
+        After combining the new things that I learned from the Web design course and past experience. I was able to
+        create
+        this Homepage HTML and also create the following :
+      </p>
+      <h4>A Code Snippet Using CSS (Hello World C#)</h4>
+      <div class="code">
+        <!--Code not formatted to avoid spacing issue-->
+        <code class="declaration">using</code>
+        <code>System</code><br /><br />
+        <code class="declaration">namespace</code>
+        <code>HelloWorld</code><br />
+        <code>{</code><br />
+        <code style="margin-left: 2rem" class="declaration">class</code>
+        <code class="className">Program</code><br />
+        <code style="margin-left: 2rem">{</code><br />
+        <code style="padding-left: 4rem" class="declaration">static</code>
+        <code class="declaration">void</code>
+        <code class="method">Main</code><code>(</code><code class="declaration">string</code><code>[]</code>
+        <code class="param">args</code><code>)</code><br />
+        <code style="margin-left: 4rem">{</code><br />
+        <code style="margin-left: 6rem" class="className">Console</code><code>.</code><code
+          class="method">WriteLine</code><code>(</code><code class="string">"Hello</code> <code
+          class="string">World"</code><code>);</code><br />
+        <code style="margin-left: 6rem" class="className">Console</code><code>.</code><code
+          class="method">ReadKey</code><code>();</code><br />
+        <code style="margin-left: 4rem">}</code><br />
+        <code style="margin-left: 2rem">}</code><br />
+        <code>}</code>
+      </div>
+      <h4>A live Clock Powered by JavaScript</h4>
+      <div class="clock">
+        <span id="hours">00</span>
+        <span class="dot">:</span>
+        <span id="minutes">00</span>
+        <span class="dot">:</span>
+        <span id="seconds">00</span>
+      </div>
+      <h4>Additional Inputs for various Application needs (Satire)</h4>
+      <div id="input-samples">
+        <i style="width: 100%; text-align: center">Phone Number Selectors</i>
+        <div>
+          <span>+1 (</span>
+          <select id="area-code"></select>
+          <span>)</span>
+          <select id="exchange-code"></select>
+          <span>-</span>
+          <select id="line-num"></select>
+        </div>
+        <div>
+          <input id="phone-selector-1" type="range" min="0" max="9999999999" />
+          <span id="selecter-output-1">+1 (500) 000-0000</span>
+        </div>
+        <div>
+          <span style="font-size: 1rem; color: rgb(139 137 137)">Is this your phone number? </span>
+          <span id="random-phone-num" style="font-size: 1rem; color: rgb(139 137 137)">+1 (000) 000-0000</span>
+          <a id="random-phone-num-btn" style="cursor: pointer">no</a>
+        </div>
+      </div>
+      <h2>What I would like to learn more about in CSS.</h2>
+      <p>
+        I wanna learn about CSS grids, and how to effectively use them. I also want to learn to use
+        <a href="https://getbootstrap.com/">Bootstrap</a>
+        to be able to adequetly design and produce professional grade websites for future clients and employers.
+      </p>
+    </main>
+
+    <!--Look in src/homepage.ts for non minified source coode-->
+    <script src="./../build/homepage.js"></script>
+  </body>
+
+  </html>
